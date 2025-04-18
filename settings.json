@@ -1,0 +1,14 @@
+{
+  "shortcuts": {
+    "Esc": "shutDown",
+    "C": "openChrome",
+    "H": "showHelpPopup",
+    "M": "focusMessenger",
+    "N": "openStickyNotes",
+    "S": "lockScreen",
+    "V": "openVSCode",
+    "Z": "focusZalo",
+    "Q": "closeCurrentTab(Alt+F4)",
+    "T": "openSourceTree"
+  }
+}

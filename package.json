@@ -1,0 +1,29 @@
+{
+  "name": "ProductivityAssistant",
+  "version": "1.0.0",
+  "description": "Background productivity app with global shortcut",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "",
+    "productName": "Productivity Assistant",
+    "win": {
+      "target": "nsis",
+      "icon": "src/assets/app-icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^35.1.5",
+    "electron-builder": "^24.6.0"
+  },
+  "keywords": [
+    "electron",
+    "desktop",
+    "productivity"
+  ],
+  "author": "Trieu Lam Hung",
+  "license": "MIT"
+}
