@@ -19,7 +19,7 @@ const shutDown = () => {
 const openChrome = () => {
   exec('tasklist | findstr /i "chrome.exe"', (error, stdout) => {
     if (stdout) {
-      exec(`powershell -command "(New-Object -ComObject WScript.Shell).AppActivate('chrome')"`); 
+      exec(`powershell -command "(New-Object -ComObject WScript.Shell).AppActivate('chrome')"`);
     } else {
       exec(`"${chromePath}" --new-window`, (err) => {
         if (err) {
@@ -33,7 +33,7 @@ const openChrome = () => {
 const openVSCode = () => {
   exec('tasklist | findstr /i "Code.exe"', (error, stdout) => {
     if (stdout) {
-      exec(`powershell -command "(New-Object -ComObject WScript.Shell).AppActivate('Visual Studio Code')"`); 
+      exec(`powershell -command "(New-Object -ComObject WScript.Shell).AppActivate('Visual Studio Code')"`);
     } else {
       exec(`start "" ${vscodePath}`);
     }
@@ -45,7 +45,7 @@ const openStickyNotes = () => {
 };
 
 const focusMessenger = () => {
-  exec(`powershell -command "(New-Object -ComObject WScript.Shell).AppActivate('Messenger')"`); 
+  exec(`powershell -command "(New-Object -ComObject WScript.Shell).AppActivate('Messenger')"`);
 };
 
 const focusZalo = () => {
@@ -53,17 +53,21 @@ const focusZalo = () => {
 };
 
 const closeCurrentTab = () => {
-  exec(`powershell -command "(New-Object -ComObject WScript.Shell).SendKeys('%{F4}')"`); 
+  exec(`powershell -command "(New-Object -ComObject WScript.Shell).SendKeys('%{F4}')"`);
 };
 
 const openSourceTree = () => {
   exec('tasklist | findstr /i "SourceTree.exe"', (error, stdout) => {
     if (stdout) {
-      exec(`powershell -command "(New-Object -ComObject WScript.Shell).AppActivate('SourceTree')"`); 
+      exec(`powershell -command "(New-Object -ComObject WScript.Shell).AppActivate('SourceTree')"`);
     } else {
       exec(`start "" ${sourceTreePath}`);
     }
   });
+};
+
+const openSlack = () => {
+  exec(`powershell -command "(New-Object -ComObject WScript.Shell).AppActivate('Slack')"`);
 };
 
 module.exports = {
@@ -77,4 +81,5 @@ module.exports = {
   closeCurrentTab,
   openSourceTree,
   showHelpPopup,
+  openSlack,
 };

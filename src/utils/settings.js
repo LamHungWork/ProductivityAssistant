@@ -9,6 +9,7 @@ const defaultSettings = {
     Esc: 'shutDown',
     C: 'openChrome',
     H: 'showHelpPopup',
+    L: 'openSlack',
     M: 'focusMessenger',
     N: 'openStickyNotes',
     Q: 'closeCurrentTab',
